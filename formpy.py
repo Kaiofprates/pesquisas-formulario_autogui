@@ -26,7 +26,7 @@ def pesq():
         rua = pyautogui.prompt(text = 'Rua',title = 'Formulário',default='')
         numero = pyautogui.prompt(text = 'Número',title = 'Formulário',default='')
         cep = pyautogui.prompt(text = 'Cep',title = 'Formulário',default='')
-        sex = pyautogui.prompt(text = 'Sexo',title = 'Formulário',default='')
+        sex = pyautogui.confirm(text='Sexo',title='Formulário',buttons=['Masculino','Feminino'])
         banco = open(nome+'.txt','w')
         banco.write(nome+'\n'+cidade+'\n'+rua+'\n'+numero+'\n'+cep+'\n'+sex+'\n')
         banco.close()
